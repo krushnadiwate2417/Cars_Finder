@@ -1,12 +1,101 @@
-# React + Vite
+# 🚗 Car Dealership Web App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and responsive React-based car dealership application where users can browse car listings, view detailed specifications, and manage a personalized wishlist — all stored in local storage.
 
-Currently, two official plugins are available:
+🌐 **Live Demo:** [https://cardealer24.netlify.app/](https://cardealer24.netlify.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠 Tech Stack
 
-## Expanding the ESLint configuration
+- **Frontend:** React, Tailwind CSS
+- **Routing:** React Router
+- **State Management:** React Hooks
+- **Storage:** LocalStorage
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 📸 Features
+
+### ✅ Browse Car Listings
+
+- Displayed in a clean, responsive card layout
+- Graceful fallback image if car image fails to load
+
+### 📋 Car Details Page
+
+- Full specifications including:
+  - Brand, Model, Price, Fuel Type
+  - Engine, Transmission, Color, Mileage, Horsepower, etc.
+- Add to Wishlist functionality (with localStorage)
+
+### ❤️ Wishlist
+
+- View all cars you've added to your wishlist
+- Persisted even after browser reload
+
+### 🌐 Navigation
+
+- Toggle between `Home` and `WishList` using the Header
+- Intuitive routing using React Router
+
+### 🌀 Loader
+
+- Global loading overlay component (`Loader`) for async UI feedback (can be plugged in later with actual data fetching)
+
+---
+
+## 📁 Project Structure
+
+```
+├── components
+│   ├── Cards.jsx
+│   ├── Loader.jsx
+│   ├── SelectFilters.jsx
+├── pages
+│   ├── Home.jsx
+│   ├── WishList.jsx
+│   ├── ShowDetails.jsx
+├── constants
+│   └── constant.js
+├── App.jsx
+├── index.css
+```
+
+---
+
+## 🧩 How It Works
+
+- On visiting the **Home page**, all cars are fetched and displayed in a paginated grid.
+- Users can search and filter cars by brand, price, fuel type, and seating capacity.
+- Clicking a car opens the **ShowDetails** page with all specifications and an option to add the car to the **Wishlist**.
+- The **Wishlist** page fetches cars from `localStorage` and displays them.
+
+---
+
+## 🚀 Getting Started
+
+```bash
+# Install dependencies
+yarn install
+# or
+npm install
+
+# Run the development server
+yarn dev
+# or
+npm run dev
+```
+
+---
+
+## 📦 Future Enhancements
+
+- Backend integration for storing car data
+- User authentication for personalized wishlists
+- Sorting and pagination logic improvements
+- Add/Edit/Delete from wishlist
+
+---
+
+
+Made with ❤️ by Krushna Diwate
+
